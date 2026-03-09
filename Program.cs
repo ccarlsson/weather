@@ -10,6 +10,7 @@ using Weather.Services;
 var builder = Host.CreateApplicationBuilder(args);
 
 builder.Logging.ClearProviders();
+
 builder.Services.AddSerilog((_, loggerConfiguration) => loggerConfiguration
     .MinimumLevel.Warning()
     .Enrich.FromLogContext()
